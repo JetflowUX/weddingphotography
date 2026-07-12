@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Italiana&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root { color-scheme: dark; }
+html { background: #171715; scroll-behavior: auto; }
+body { margin: 0; background: #171715; color: #f4eee4; font-family: "DM Sans", sans-serif; }
+* { box-sizing: border-box; }
+::selection { background: #ae9364; color: #171715; }
+button, input, select, textarea { font: inherit; }
+a, button, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+.font-display { font-family: "Italiana", Georgia, serif; }
+.film-grain { pointer-events: none; position: fixed; z-index: 60; inset: 0; opacity: .07; mix-blend-mode: soft-light; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E"); }
+@media (pointer: fine) { body { cursor: none; } a, button, input, select, textarea { cursor: none; } }
+.field { display: block; width: 100%; border: 0; border-bottom: 1px solid rgba(244,238,228,.30); background: transparent; padding: .8rem 0 .65rem; color: #f4eee4; outline: none; font-size: .925rem; text-transform: none; letter-spacing: normal; transition: border-color .2s ease; }
+.field:focus { border-color: #b59a68; }
+.field option { background: #24231f; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(45px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
